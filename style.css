@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/*  ===========================================header section starts ===========================================*/
+nav,
+.landing-page {
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    min-height: 100vh;
+    margin: auto;
+    background-color: #4e4e4e;
+    /* width: 100% !important; */
+}
+
+.header .links {
+    text-align: center;
+}
+
+.header .links a {
+    font-family: "Inter", sans-serif;
+    margin: 30px 35px;
+    display: inline-block;
+    font-weight: 400;
+    position: relative;
+    transition: .5s;
+}
+
+.header .links a::after {
+    content: "";
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 25px;
+    width: 0%;
+    background-color: #13FF00;
+    transition: .6s;
+}
+
+.header .links a:hover {
+    color: #13FF00;
+}
+
+.header .links a:hover::after {
+    width: 100%;
+}
+
+.menu-bar {
+    /* display: flex;
+    align-items: center; */
+    display: none;
+}
+
+/*  =========================================== header section end ===========================================*/
+
+
+
+
+
+
+/*  =========================================== landing section starts ===========================================*/
+.landing-page {
+    margin-top: 180px !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+
+.landing-page .left .contant span {
+    color: #13FF00;
+    font-size: 28px;
+    font-family: "inter", sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    border-bottom: 3px solid #13FF00;
+}
+
+.landing-page .left .contant h2 {
+    font-size: 32px;
+    font-family: "inter", sans-serif;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+
+.landing-page .left .contant p {
+    font-size: 17px;
+    font-family: "inter", sans-serif;
+    line-height: 27px;
+    color: #8F8F8F;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.landing-page .left .contant .download-links {
+    margin-bottom: 80px;
+}
+
+.landing-page .left .contant .download-links .links {
+    font-family: "inter", sans-serif;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.landing-page .left .contant .download-links .links i {
+    font-size: 25px;
+    color: #13FF00;
+    margin-right: 3px;
+}
+
+.landing-page .left .contant .download-links .links h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.landing-page .left .contant .download-links .links :nth-child(2) i {
+    color: black;
+    font-size: 25px;
+
+}
+
+.landing-page .left .contant .download-links .links :nth-child(2) {
+    color: black;
+    background-color: #13FF00;
+    margin-left: 25px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.social-media-icons .icons {
+    margin-right: 10px;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(5, 70px);
+    justify-content: start;
+}
+
+
+.social-media-icons .icons i {
+    margin-right: 20px;
+    transition: .4s;
+}
+
+.social-media-icons .icons i:hover {
+    background-color: #65b360;
+    color: white;
+}
+
+.social-media-icons .icons i {
+    font-size: 20px;
+    background-color: #353535ea;
+    padding: 15px;
+    border-radius: 50px;
+
+}
+
+.landing-page .right {
+    display: flex;
+    align-items: center;
+}
+
+.landing-page .right .contant img {
+    width: 110%;
+    height: 450px;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+/*  ======================================= media querry section starts ======================================*/
+@media only screen and (max-width:600px) {
+    .landing-page .right .contant img {
+        height: 260px !important;
+        border-radius: 50%;
+    }
+
+    .landing-page {
+        margin-top: 50px !important;
+    }
+
+    nav .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-bar {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .menu-bar i {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    nav .links {
+        transition: .5s;
+        overflow: hidden;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+    }
+
+    .menu-bar:checked i {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .landing-page {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .landing-page .right {
+        order: 1;
+    }
+
+    .landing-page .left {
+        order: 2;
+        text-align: center;
+    }
+
+    .landing-page .left .contant,
+    .download-links .links,
+    .social-media-icons .icons {
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .landing-page .right .contant img {
+        height: 210px !important;
+        border-radius: 50%;
+    }
+
+    .social-media-icons .icons {
+        display: none;
+    }
+
+    .landing-page .left .contant .download-links .links:nth-child(2),
+    .landing-page .left .contant .download-links .links:nth-child(1) {
+
+        display: inline-block;
+
+    }
+
+    .landing-page .left .contant .download-links .links h3:nth-child(1) {
+        padding-bottom: 10px;
+    }
+
+    .landing-page .left .contant .download-links .links {
+        display: block;
+    }
+
+    .landing-page .left {
+        padding: 0px 20px;
+    }
+}
+
+
+@media only screen and (max-width:992px) {
+
+    nav,
+    .landing-page {
+        width: 90%;
+        margin: auto;
+    }
+
+    .landing-page .left .contant span {
+        font-size: 20px;
+    }
+
+    .landing-page .left .contant h2 {
+        font-size: 25px;
+        line-height: 45px;
+    }
+
+    .landing-page .left .contant p {
+        font-size: 15px;
+    }
+
+    .landing-page .left .contant .download-links .links i {
+        font-size: 23px;
+    }
+
+    .landing-page .left .contant .download-links .links h3 {
+        font-size: 18px;
+    }
+
+    .landing-page .left .contant .download-links .links :nth-child(2) i {
+        font-size: 23px;
+    }
+
+    .landing-page .right .contant img {
+        height: 350px;
+        border-radius: 50%;
+    }
+
+    .landing-page .left .contant .download-links {
+        margin-bottom: 50px;
+    }
+
+}
