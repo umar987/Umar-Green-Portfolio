@@ -7,6 +7,8 @@
     text-transform: capitalize;
     text-decoration: none;
     color: white;
+    font-family: "inter", sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -22,7 +24,6 @@ nav,
     min-height: 100vh;
     margin: auto;
     background-color: #4e4e4e;
-    /* width: 100% !important; */
 }
 
 .header .links {
@@ -59,8 +60,6 @@ nav,
 }
 
 .menu-bar {
-    /* display: flex;
-    align-items: center; */
     display: none;
 }
 
@@ -150,6 +149,7 @@ nav,
     display: grid;
     grid-template-columns: repeat(5, 70px);
     justify-content: start;
+    padding-bottom: 50px;
 }
 
 
@@ -182,13 +182,114 @@ nav,
     border-radius: 50%;
 }
 
+ /*  =========================================== landing section end ===========================================*/
 
 
 
+
+ /*  =========================================== about section start ===========================================*/ 
+
+.about{
+    background-color: #222222;
+    padding: 30px 0px;
+    text-align: center;
+    border-left: 10px solid #4e4e4e;
+}
+
+.about-contant{
+    width: 40%;
+    margin: auto;
+    padding: 100px 20px;
+}
+
+.about-contant h2{
+    font-size: 35px;
+    display: inline-block;
+    position: relative;
+}
+
+.about-contant h2::after{
+        content: "";
+        height: 3px;
+        border-radius: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 80px;
+        top: 45px;
+        width: 20%;
+        background-color: #13FF00;
+        transition: .6s;
+}
+
+.about-contant :nth-child(2){
+    margin-top: 50px;
+    color: #8F8F8F;
+    font-weight: 500;
+    line-height: 25px;
+    text-align-last: center;
+    font-size: 16px;
+}
+
+.about-contant :nth-child(3){
+    margin-top: 30px;
+    color: #8F8F8F;
+    font-weight: 500;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.about p span{
+    color: #13FF00;
+}
+
+
+
+ /*  =========================================== about section end ===========================================*/ 
+
+ .services{
+    background-color: #292929;
+    padding: 120px 0px;
+    min-height: 60vh;
+    
+ }
+ .services-contant{
+    width: 85%;
+    margin: auto;
+    
+}
+.services .heading h2{
+    text-align: center;
+    font-size: 35px;
+}
+.services .services-contant .contant{ 
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    justify-items: center;
+    margin-top: 100px;
+    
+}
+.services .services-contant .contant i{
+    font-size: 35px;
+    margin-right: 10px;
+}
+.services .services-contant .contant p{
+    display: inline-block;
+    font-size: 21px;
+    font-family: 500;
+    padding: 50px 0px
+}
+
+.services  i{   
+    color: #13FF00;
+}
 
 
 /*  ======================================= media querry section starts ======================================*/
 @media only screen and (max-width:600px) {
+    .services .services-contant .contant{ 
+        grid-template-columns:repeat(1,1fr);
+    }
+
     .landing-page .right .contant img {
         height: 260px !important;
         border-radius: 50%;
@@ -289,11 +390,33 @@ nav,
 
 @media only screen and (max-width:992px) {
 
+    .services .services-contant .contant i{
+        font-size: 30px; 
+    }
+    .services .heading h2{
+        font-size: 30px; 
+    }
+    .services .services-contant .contant p{
+        font-size: 18px;
+    }
     nav,
-    .landing-page {
+    .landing-page,.about-contant,.services-contant {
         width: 90%;
         margin: auto;
     }
+   
+    .about-contant p{
+        font-size: 15px !important;
+    }
+    .about-contant h2{
+        font-size: 30px ;
+    }
+    .about-contant h2::after{     
+        height: 3px;      
+        left: 63px;      
+        top: 35px;
+        width: 20%;        
+}
 
     .landing-page .left .contant span {
         font-size: 20px;
