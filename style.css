@@ -38,6 +38,8 @@ nav,
     font-weight: 400;
     position: relative;
     transition: .5s;
+    text-decoration: none;
+    color: white;
 }
 
 .header .links a::after {
@@ -292,8 +294,187 @@ nav,
 
  /* =============================== services section end ============================* */
 
+
+
+
+ /* =============================== project  section start ============================* */
+
+.project-section{
+    background-color: #202020;
+    /* min-height: 100vh; */
+    padding: 100px 0px;
+}
+
+.project-section .contant {
+   
+    text-align: center;
+margin: auto;
+}
+
+.project-section h2{
+    font-size: 35px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.project-section .contant h2::after{
+        content: "";
+        height: 3px;
+        border-radius: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 80px;
+        top: 45px;
+        width: 20%;
+        background-color: #13FF00;
+        transition: .6s;
+}
+
+
+
+.product {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .product-category {
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+  }
+  
+  .product-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 85%;
+    margin: auto;
+    object-fit: cover;
+  }
+  
+  .product-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card {
+    flex: 0 0 auto;
+    margin-right: 40px;
+    height: 400px;
+    background-color: #272727;
+    
+  }
+  .product-card img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* object-fit: cover; */
+    width: 350px;
+    height:auto;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+  }
+  
+  .product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .pre-btn,
+  .nxt-btn {
+    border: none;
+    height: auto;
+    position: absolute;
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); */
+    cursor: pointer;
+    z-index: 8;
+  }
+  
+  .pre-btn {
+    left: 60px;
+
+    background-color: #13FF00;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    /* position: fixed; */
+    transform: rotate(180deg);
+  }
+  
+  .nxt-btn {
+    background-color: #13FF00;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    right:95px;
+    /* position: fixed; */
+  }
+  
+  .pre-btn img,
+  .nxt-btn img {
+
+  }
+  
+  .pre-btn:hover img,
+  .nxt-btn:hover img {
+   
+  }
+  .product-info{
+    padding: 10px 15px;
+  }
+  .product-info .content p{
+    font-weight: 700;
+    font-size: 21px;
+    margin-bottom: 15px;
+  }
+
+  .product-info .content .logo i {
+   color: #13FF00;
+   font-size: 22px;
+  }
+
+  .product-info .content .logo span {
+   margin-left: 5px;
+   font-size: 17px;
+  }
+
+ .card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.card-footer span{
+    font-size: 16px;
+   }
+ .card-footer a{
+ background-color: #13FF00;  
+ color: black;
+ padding: 8px 20px;
+ font-weight: 600;
+ border-radius: 10px;
+}
+ /* =============================== project  section end ============================* */
+
  
 /*  ======================================= media querry section starts ======================================*/
+
+
+
+
 @media only screen and (max-width:745px){
     .header .links a {  
         margin: 30px 20px;     
@@ -468,3 +649,12 @@ nav,
     }
 
 }
+
+
+
+
+
+  
+
+
+
