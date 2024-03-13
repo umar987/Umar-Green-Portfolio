@@ -14,6 +14,7 @@
 
 
 /*  ===========================================header section starts ===========================================*/
+
 nav,
 .landing-page {
     width: 80%;
@@ -246,6 +247,12 @@ nav,
 
  /*  =========================================== about section end ===========================================*/ 
 
+
+
+
+
+
+ /* =============================== services section end ============================* */
  .services{
     background-color: #292929;
     padding: 120px 0px;
@@ -283,8 +290,16 @@ nav,
     color: #13FF00;
 }
 
+ /* =============================== services section end ============================* */
 
+ 
 /*  ======================================= media querry section starts ======================================*/
+@media only screen and (max-width:745px){
+    .header .links a {  
+        margin: 30px 20px;     
+    }
+
+}
 @media only screen and (max-width:600px) {
     .services .services-contant .contant{ 
         grid-template-columns:repeat(1,1fr);
