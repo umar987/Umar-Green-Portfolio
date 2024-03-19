@@ -330,8 +330,63 @@ margin: auto;
 }
 
 
+/* 
+.carousol-wrapper {
+    padding: 50px 0px;
+    background-color: #202020;
+    width: 100%;
+    max-width: 2000px;
+    position: relative;
+}
 
-.product {
+.carousol-wrapper .img img {
+    height: auto;
+    width: 330px;
+    object-fit: cover;
+}
+
+.carousol .card {
+    height: 430px;
+    list-style: none;
+    background-color: #272727;
+    border-radius: 10px;
+}
+
+.carousol-wrapper .carousol {
+    width: 80%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 20px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousol-wrapper i {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #13FF00;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousol-wrapper i:first-child {
+    left: 22px;
+}
+
+.carousol-wrapper i:last-child {
+    right: 22px;
+} */
+
+
+
+
+/* .product {
     position: relative;
     overflow: hidden;
     padding: 20px;
@@ -396,8 +451,17 @@ margin: auto;
     align-items: center;
     /* background-color: #202020; */
     /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); */
-    cursor: pointer;
-    z-index: 8;
+  /* } */
+    
+  .slider-container {
+    margin: 50px auto;
+    width: 80%;
+  }
+  .slick-slide {
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   
   .pre-btn {
@@ -456,7 +520,7 @@ margin: auto;
  padding: 8px 20px;
  font-weight: 600;
  border-radius: 10px;
-}
+} 
  /* =============================== project  section end ============================* */
 
  
@@ -464,8 +528,10 @@ margin: auto;
 
 
 @media only screen and (max-width:400px){
-    .product-card img{
-       width: 250px;
+    .carousol-wrapper .img img{
+        
+        width: 250px;
+       
     }
     .product-container {
         width: 100%;
